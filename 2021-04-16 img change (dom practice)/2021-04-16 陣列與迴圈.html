@@ -133,42 +133,47 @@
         //全部刪除再新增，節省行數，給他一個function
 
 
-        btn[0].onclick = function (){
+        // btn[0].onclick = function (){
             
             
-            disappearContent()
+        //     disappearContent()
             
-            btn[0].classList.add('active')
-            content[0].classList.remove('disappear')
+        //     btn[0].classList.add('active')
+        //     content[0].classList.remove('disappear')
 
-        }
+        // }
 
-        btn[1].onclick = function (){
+        // btn[1].onclick = function (){
             
-            disappearContent()
+        //     disappearContent()
             
-            btn[1].classList.add('active')
-            content[1].classList.remove('disappear')
-        }
-        btn[2].onclick = function (){
+        //     btn[1].classList.add('active')
+        //     content[1].classList.remove('disappear')
+        // }
+        // btn[2].onclick = function (){
             
-            disappearContent()
+        //     disappearContent()
             
             
-            btn[2].classList.add('active')
-            content[2].classList.remove('disappear')
-        }
+        //     btn[2].classList.add('active')
+        //     content[2].classList.remove('disappear')
+        // }
 
 
-        function disappearContent() {
-            content[0].classList.add('disappear')
-            content[1].classList.add('disappear')
-            content[2].classList.add('disappear')
-            btn[0].classList.remove('active')
-            btn[1].classList.remove('active')
-            btn[2].classList.remove('active')
-        }
+        // function disappearContent() {
+        //     content[0].classList.add('disappear')
+        //     content[1].classList.add('disappear')
+        //     content[2].classList.add('disappear')
+        //     btn[0].classList.remove('active')
+        //     btn[1].classList.remove('active')
+        //     btn[2].classList.remove('active')
+        // }
 
+
+            for (let index = 0; index < 3; index++) {
+                console.log(btn[2]);
+                
+            }
 
 
 
