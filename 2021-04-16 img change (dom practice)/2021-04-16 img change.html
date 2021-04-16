@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <img src="./a.gif" alt="" id="myImg">
+
+    <script>
+        // 只有一張圖片，所以也可以用querySelector('img')
+        var myImg = document.getElementById('myImg')
+
+        // var a = './a.gif'
+
+        // var b = './b.gif'
+
+        myImg.onclick = function () {  
+            console.log(myImg.src);
+            // 記得相等(equal)要用==
+            if (myImg.getAttribute('src')== './a.gif') {
+                myImg.src = './b.gif'
+            } 
+            else {
+                myImg.src = './a.gif'
+            }
+          
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

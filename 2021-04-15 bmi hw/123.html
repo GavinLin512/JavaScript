@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="d-flex">
+        <span>請輸入身高(cm):</span><input id="height" type="text">
+    </div>
+    <div class="d-flex">
+        <span>請輸入體重(kg):</span><input id="weight" type="text">
+    </div>
+    <div class="d-flex justify-content-around w-100">
+        <div id="start_btn" class="btn">開始計算</div>
+        <div id="reset_btn" class="btn">重新計算</div>
+    </div>
+
+
+
+
+
+    <script>
+
+var start_btn = document.querySelector("#start_btn")
+        var resultCanvas = document.querySelector(".resultCanvas")
+
+        var result_BMI = document.getElementById('result_BMI')
+        var result_bodyStatus = document.getElementById('result_bodyStatus')
+        var result_suggest = document.getElementById('result_suggest')
+
+        var weight = document.getElementById('weight').value
+        var height = document.getElementById('height').value
+        var finalValue = document.getElementById('result_BMI')
+
+        
+        // function BMI(x, y) {
+        //     return (y/x**2)*10000
+        // }
+
+        
+
+        start_btn.onclick = function () {
+            // resultCanvas.classList.add('active')
+
+
+
+            finalValue = parseInt(weight)/parseInt(height);
+            
+
+
+            console.log(finalValue);
+
+
+
+
+
+
+            
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var x = 170
+        // var y = 130
+        // var finalValue = BMI(x, y)
+        // console.log(finalValue);
+
+        
+
+        // function BMI(x, y) {
+        //     return (y/x**2)*10000
+        // }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
