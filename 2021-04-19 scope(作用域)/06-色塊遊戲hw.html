@@ -38,72 +38,68 @@
         }
 
         .box {
-            width: 100%;
-            height: 100%;
+            width: 50%;
+            height: 50%;
             border: 2px solid white;
             background-color: wheat;
             border-radius: 8px;
         }
-
     </style>
 </head>
 
 <body>
     <div class="canvas">
-        <div class="game-panel">
-
-        </div>
+        <div class="game-panel"></div>
     </div>
 
     <script>
         var GamePanel = document.querySelector('.game-panel')
-        var box = document.querySelector('.box')
-        var level =  4
+        
+        var level = 1
+        
+
         newGame()
 
         function newGame() {
+
+            let color = `${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}`
             // 產生方塊
+
             // 調整方塊數量大小
             // 產生一個隨機顏色，賦予方塊
-            
             for (let index = 0; index < level*level; index++) {
-                GamePanel.innerHTML += `<div class="box"style="width:calc(100%/4);height:calc(100%/4);background-color:rgb(${color})"></div>`
-            }
-            var boxGroup = document.querySelectorAll('.box')
+                GamePanel.innerHTML += `<div class="box"style="width:calc(100%/${level});height:calc(100%/${level});background-color:rgb(${color})"></div>`
+                
             
-            console.log(boxGroup);
             
-
-
-            
-            function randomRGB() {
-                var r = Math.floor(Math.random() * 256) ;
-                var g = Math.floor(Math.random() * 256) ;
-                var b = Math.floor(Math.random() * 256) ;
-                return "rgb(" + r + ", " + g + ", " + b + ")";
             }
 
             // 隨機產生正解方塊
-            boxGroup[Math.floor(Math.random()*(level*level))].classList.add('ans')
+            var manyBox = document.querySelectorAll(".box")
+            manyBox[Math.floor(Math.random()*(level*level))].classList.add('ans')
+            console.log(manyBox);
 
             // 正解方塊透明度調整
             var ans = document.querySelector(".ans")
-            ans.style.opacity = 0.5
+            ans.style.opacity = 0.5 + 0.05 * level
 
             // 幫正解方塊加上onclick事件
-            ans.onclick = function(){
-
-                for (let index = 0; index < 10; index++) {
-                    const element = array[index];
-                    
-                }
-                alert("答對了")
+            ans.onclick = function(){ 
+                // 當玩家按到這個方塊(正解)的時候，開啟下一關
+                level++
                 GamePanel.innerHTML=``
                 newGame()
+                // 如果level = 10 的時候顯示過關，並重置遊戲
+                if(level == 10){
+                alert("恭喜答對，你的眼睛還好嗎")
+                GamePanel.innerHTML=``
+                newGame(level = 1)
+                }
+
             }
 
-            // 當玩家按到這個方塊(正解)的時候，開啟下一關
-            // 如果level = 10 的時候顯示過關，並重置遊戲
+           
+            
         }
     </script>
 </body>
