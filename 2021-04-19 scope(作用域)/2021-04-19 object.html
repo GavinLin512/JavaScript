@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card-group {
+            width: calc(100% - 100px);
+            height: 100vh;
+            padding: 0px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px;
+            background-color: black;
+
+            margin-bottom: 50px;
+        }
+
+        img {
+            width: 100%;
+            height: 60%;
+            background-color: aqua;
+        }
+
+        .content {
+            width: 100%;
+            height: 40%;
+            background-color: bisque;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-group">
+
+    </div>
+
+
+
+
+
+    <script>
+
+        // object
+        // key:value,
+        var tea1 = {
+            img: 'https://pbs.twimg.com/media/DpSOe_WU4AEA-eP.jpg',
+            name: '美人鮮奶茶',
+            price: '50',
+            inside: '普洱茶(3分)，鮮奶，椰果'
+        }
+
+        var tea2 = {
+            img: 'https://hoolee.tw/wp-content/uploads/2017/06/1498288265-62bf1edb36141f114521ec4bb4175579-200x300.jpg',
+            name: '蒙古鮮奶茶',
+            price: '50',
+            inside: '普洱茶(5分)，鮮奶，珍珠'
+        }
+
+        var tea3 = {
+            img: 'https://hoolee.tw/wp-content/uploads/2017/06/1498288250-d0096ec6c83575373e3a21d129ff8fef.jpg',
+            name: '私藏美人紅˙',
+            price: '35',
+            inside: '紅茶，鮮奶，粉角'
+        }
+
+        var tea4 = {
+            img: 'https://i2.achangpro.com/img.tiffany0118.com/uploads/20171218023556_541.jpg',
+            name: '黑美人鮮奶茶',
+            price: '55',
+            inside: '普洱茶(7分)，鮮奶，珍珠'
+        }
+
+        var card_group = document.querySelector('.card-group')
+
+        //  `
+        // <div class="card">
+        //    <img src="${tea1.img}" alt="">
+        //    <div class="content">
+        //        <p>品名:${tea1.name}</p>
+        //        <p>價錢:${tea1.price}</p>
+        //        <p>內容物:${tea1.inside}</p>
+        //    </div>
+        // </div>
+
+        // `
+
+
+        var moreTea = [tea1, tea2, tea3, tea4]
+
+            // for (let index = 0; index < moreTea.length; index++) {
+            //     const element = moreTea[index];
+            //     card_group.innerHTML +=
+            //         `
+            // <div class="card">
+            //    <img src="${element.img}" alt="">
+            //    <div class="content">
+            //        <p>品名:${element.name}</p>
+            //        <p>價錢:${element.price}</p>
+            //        <p>內容物:${element.inside}</p>
+            //    </div>
+            // </div>
+
+            // `
+            //     console.log(element.img);
+
+
+            // }
+
+
+            moreTea.forEach((element,index) => {
+                card_group.innerHTML +=
+                    `
+            <div class="card">
+               <img src="${element.img}" alt="">
+               <div class="content">
+                   <p>品名:${element.name}</p>
+                   <p>價錢:${element.price}</p>
+                   <p>內容物:${element.inside}</p>
+               </div>
+            </div>
+
+            `
+
+            });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

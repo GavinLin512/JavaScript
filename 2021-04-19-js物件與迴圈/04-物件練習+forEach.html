@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .card-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px;
+            background-color: wheat;
+            margin: 0 0 80px 0;
+        }
+
+        .photo {
+            width: 100%;
+            height: 70%;
+            background-color: red;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            width: 100%;
+            height: 30%;
+            padding: 10px 0;
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-group"></div>
+
+    <script>
+
+        var Drink_Store = [
+            {
+                img: 'https://www.mcdonalds.com/content/dam/tw/nutrition/nfl-product/product/regular/iced-black-tea-sugarfree.jpg',
+                name: "紅茶",
+                price: '25',
+                content: '紅茶茶葉、水、糖',
+            },
+            {
+                img: 'https://img.ltn.com.tw/Upload/liveNews/BigPic/600_phpCnuY4l.jpg',
+                name: "珍珠奶茶",
+                price: '60',
+                content: '珍珠、牛奶、紅茶',
+            },
+            {
+                img: 'https://d1ralsognjng37.cloudfront.net/697f5c29-36ec-4a7e-9796-3aba24812621.jpeg',
+                name: "多多綠茶",
+                price: '50',
+                content: '養樂多、綠茶',
+            },
+            {
+                img: 'https://pic.pimg.tw/peggytsang/4be423f29b02c.jpg',
+                name: "烏龍奶茶",
+                price: '40',
+                content: '烏龍茶、紅茶、牛奶',
+            },
+        ]
+
+        var card_group = document.querySelector('.card-group')
+
+        // for Loop
+        // for (let index = 0; index < Drink_Store.length; index++) {
+        //     const product = Drink_Store[index];
+
+        //     card_group.innerHTML += `
+        //     <div class="card">
+        //         <div class="photo">
+        //             <img src="${product.img}" alt="">
+        //         </div>
+        //         <div class="content">
+        //             <p>品名:${product.name}</p>
+        //             <p>售價:${product.price}</p>
+        //             <p>內容物:${product.content}</p>
+        //         </div>
+        //     </div>
+        //     `
+        // }
+
+        // forEach
+        Drink_Store.forEach(element => {
+            card_group.innerHTML += `
+            <div class="card">
+                <div class="photo">
+                    <img src="${element.img}" alt="">
+                </div>
+                <div class="content">
+                    <p>品名:${element.name}</p>
+                    <p>售價:${element.price}</p>
+                    <p>內容物:${element.content}</p>
+                </div>
+            </div>
+            `
+        });
+
+
+
+
+
+        var arr = ["甲", "乙", "丙"]
+
+        // foreach 原版
+        // arr.forEach(function(element,index){
+        //     console.log(element + "是第 "+index+"個");
+        // });
+
+        // 箭頭函式 版本
+        // arr.forEach((element,index) => {
+        //     console.log(element + "是第 "+index+"個");
+        // });
+
+
+
+    </script>
+</body>
+
+</html>
