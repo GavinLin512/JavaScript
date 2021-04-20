@@ -62,22 +62,26 @@
 
         function newGame() {
 
-            let color = `${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}`
-            // 產生方塊
-
-            // 調整方塊數量大小
             // 產生一個隨機顏色，賦予方塊
+            let color = `${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}`
+
+            // 產生方塊
             for (let index = 0; index < level*level; index++) {
-                GamePanel.innerHTML += `<div class="box"style="width:calc(100%/${level});height:calc(100%/${level});background-color:rgb(${color})"></div>`
-                
-            
-            
+                GamePanel.innerHTML += `<div class="box"></div>`
             }
 
-            // 隨機產生正解方塊
+             // 調整方塊數量大小
             var manyBox = document.querySelectorAll(".box")
-            manyBox[Math.floor(Math.random()*(level*level))].classList.add('ans')
             console.log(manyBox);
+            manyBox.forEach(element => {
+                element.style.width = (100 / level) + '%'
+                element.style.height = (100 / level) + '%'
+                element.style.backgroundColor = `rgb(${color})`
+            });
+
+            // 隨機產生正解方塊
+            manyBox[Math.floor(Math.random()*(level*level))].classList.add('ans')
+           
 
             // 正解方塊透明度調整
             var ans = document.querySelector(".ans")
@@ -85,21 +89,19 @@
 
             // 幫正解方塊加上onclick事件
             ans.onclick = function(){ 
+                
                 // 當玩家按到這個方塊(正解)的時候，開啟下一關
                 level++
                 GamePanel.innerHTML=``
                 newGame()
+                
                 // 如果level = 10 的時候顯示過關，並重置遊戲
                 if(level == 10){
                 alert("恭喜答對，你的眼睛還好嗎")
                 GamePanel.innerHTML=``
                 newGame(level = 1)
                 }
-
-            }
-
-           
-            
+            }  
         }
     </script>
 </body>
