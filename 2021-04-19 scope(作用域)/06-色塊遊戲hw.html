@@ -66,6 +66,7 @@
             let color = `${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)}`
 
             // 產生方塊
+            // level*level == Math.pow(level,2) == level**2
             for (let index = 0; index < level*level; index++) {
                 GamePanel.innerHTML += `<div class="box"></div>`
             }
@@ -80,6 +81,7 @@
             });
 
             // 隨機產生正解方塊
+            // level*level == manyBox.length
             manyBox[Math.floor(Math.random()*(level*level))].classList.add('ans')
            
 
@@ -91,15 +93,16 @@
             ans.onclick = function(){ 
                 
                 // 當玩家按到這個方塊(正解)的時候，開啟下一關
-                level++
+                level++ // level++ == level+=1
                 GamePanel.innerHTML=``
                 newGame()
                 
                 // 如果level = 10 的時候顯示過關，並重置遊戲
+                // level >= 10也行
                 if(level == 10){
                 alert("恭喜答對，你的眼睛還好嗎")
                 GamePanel.innerHTML=``
-                newGame(level = 1)
+                level = 1
                 }
             }  
         }
