@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Card</title>
+    <link rel="stylesheet" href="./css/2021-04-21 weather card copy.css">
+</head>
+
+<body>
+    <div class="weather-cards">
+        <div class="weather-card">
+            <div class="icon sun-shower">
+                <div class="cloud"></div>
+                <div class="sun">
+                  <div class="rays"></div>
+                </div>
+                <div class="rain"></div>
+              </div>
+        </div>
+        <div class="weather-card">
+            <div class="icon thunder-storm">
+                <div class="cloud"></div>
+                <div class="lightning">
+                  <div class="bolt"></div>
+                  <div class="bolt"></div>
+                </div>
+              </div>
+        </div>
+        <div class="weather-card">
+            <div class="icon cloudy">
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+              </div>
+        </div>
+        <div class="weather-card">
+
+        </div>
+        <div class="weather-card">
+            <div class="icon flurries">
+                <div class="cloud"></div>
+                <div class="snow">
+                  <div class="flake"></div>
+                  <div class="flake"></div>
+                </div>
+              </div>
+        </div>
+        <div class="weather-card">
+            <div class="icon sunny">
+                <div class="sun">
+                  <div class="rays"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="icon-bg">
+    <div class="icon sun-shower">
+      <div class="cloud"></div>
+      <div class="sun">
+        <div class="rays"></div>
+      </div>
+      <div class="rain"></div>
+    </div>
+    
+    <div class="icon thunder-storm">
+      <div class="cloud"></div>
+      <div class="lightning">
+        <div class="bolt"></div>
+        <div class="bolt"></div>
+      </div>
+    </div>
+    
+    <div class="icon cloudy">
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+    </div>
+    
+    <div class="icon flurries">
+      <div class="cloud"></div>
+      <div class="snow">
+        <div class="flake"></div>
+        <div class="flake"></div>
+      </div>
+    </div>
+    
+    <div class="icon sunny">
+      <div class="sun">
+        <div class="rays"></div>
+      </div>
+    </div>
+    
+    <div class="icon rainy">
+      <div class="cloud"></div>
+      <div class="rain"></div>
+    </div>
+</div>
+    
+    <!-- <p>Based on <a href="https://dribbble.com/shots/2097042-Widget-Weather" target="_blank">Dribbble</a> by kylor</p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+       var weather_card = 
+
+
+
+
+
+
+
+
+
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson);
+            });
+
+    </script>
+</body>
+
+</html>
