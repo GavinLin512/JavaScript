@@ -7,85 +7,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Card</title>
     <link rel="stylesheet" href="./css/2021-04-21 weather card.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Noto+Sans+TC&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <nav>
+        <div class="menu">
+            <div class="line"></div>
+        </div>
+        <button onclick="getInfo(0)">時段1</button>
+        <button onclick="getInfo(1)">時段2</button>
+        <button onclick="getInfo(2)">時段3</button>
+    </nav>
     <div class="weather-cards">
-
     </div>
+
 
 
     <script>
         var weather_cards = document.querySelector('.weather-cards')
 
-        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                const location = myJson.records.location
-                location.forEach(city => {
-                    let cityname = city.locationName
-                    let Wx = city.weatherElement[0].time[0].parameter.parameterName
-                    // let time = city.weatherElement[0].time[0].startTime
-                    let PoP = city.weatherElement[1].time[0].parameter.parameterName + '%'
-                    let MinT = city.weatherElement[2].time[0].parameter.parameterName + '°C'
-                    let CI = city.weatherElement[3].time[0].parameter.parameterName
-                    let MaxT = city.weatherElement[4].time[0].parameter.parameterName + '°C'
+        function getInfo(_time) {
 
-                    let icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-3.svg'
+            weather_cards.innerHTML = '';
 
-                    console.log();
+            fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (myJson) {
+                    const location = myJson.records.location
+                    location.forEach(city => {
+                        let cityname = city.locationName
+                        let Wx = city.weatherElement[0].time[_time].parameter.parameterName
+                        let PoP = city.weatherElement[1].time[_time].parameter.parameterName + '%'
+                        let MinT = city.weatherElement[2].time[_time].parameter.parameterName + '°C'
+                        let CI = city.weatherElement[3].time[_time].parameter.parameterName
+                        let MaxT = city.weatherElement[4].time[_time].parameter.parameterName + '°C'
+
+                        let icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-3.svg'
+
+                        console.log();
+
+                        if (Wx.includes('晴') && Wx.includes('雲')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-2.svg'
+                        } else if (Wx.includes('晴') && Wx.includes('多雲')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-3.svg'
+                        } else if (Wx.includes('晴') && Wx.includes('陣雨')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-1.svg'
+                        } else if (Wx.includes('晴')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/day.svg'
+                        } else if (Wx.includes('雷雨')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/thunder.svg'
+                        } else if (Wx.includes('多雲') && Wx.includes('陣雨')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-5.svg'
+                        } else if (Wx.includes('多雲') && Wx.includes('陣雨') && Wx.includes('晴')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-2.svg'
+                        } else if (Wx.includes('陰') && Wx.includes('雨')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-4.svg'
+                        } else if (Wx.includes('陰') || Wx.includes('多雲')) {
+                            icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy.svg'
+                        }
+
+                        // 設定日期時間
+                        var Today = new Date();
+                        var localDate = Today.getFullYear() + " 年/ " + appendZero(Today.getMonth() + 1) + " 月/ " + appendZero(Today.getDate()) + '日'
+                        var time = appendZero(Today.getHours()) + " : " + appendZero(Today.getMinutes()) + " : " + appendZero(Today.getSeconds())
 
 
-                    if (Wx.includes('晴') && Wx.includes('雲')) {
-                        icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-2.svg'
-                    } else if (Wx.includes('晴') && Wx.includes('多雲')) {
-                        icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/cloudy-day-3.svg'
-                    } else if (Wx.includes('晴') && Wx.includes('陣雨')) {
-                        icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-1.svg'
-                    } else if (Wx.includes('雷雨')) {
-                        icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/thunder.svg'
-                    } else if (Wx.includes('多雲') && Wx.includes('陣雨')) {
-                        icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-5.svg'
-                    } else if (Wx.includes('多雲') && Wx.includes('陣雨')) {
-                        icon = 'https://www.amcharts.com/wp-content/themes/amcharts4/css/img/icons/weather/animated/rainy-2.svg'
-                    }
-                    let Today = new Date();
-                    let now = Today.getFullYear() + " 年/ " + (Today.getMonth() + 1) + " 月/ " + Today.getDate() +'日'
-                    
-                    
-
-                    weather_cards.innerHTML += `
+                        weather_cards.innerHTML += `
                         <div class="weather-card">
                         <div class="left-side">
-                            <div class="status">${Wx}<br><br>${CI}</div>
-                            <div class="temp">${MinT}</div>
+                            <div class="date">${localDate}<br>${time}</div>
+                            <div class="clock"></div>
+                            <div class="temp">${MinT}~${MaxT}</div>
                         </div>
                         <div class="weather-icon">
                             <img src="${icon}" alt=""> 
                             </div>
                         <div class="right-side">
-                            <div class="time">${now}</div>
                             <div class="city">${cityname}</div>
+                            <div class="status">${Wx}<br>${CI}</div>
                         </div>
                         `
 
-
-
-
-
+                    });
 
                 });
 
+            function appendZero(num) {
+                if (num < 10) {
+                    return '0' + num
+                } else {
+                    return num
+                }
 
-
-
-
-            });
-
-
-
+            }
+        }
     </script>
 </body>
 

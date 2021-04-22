@@ -1,172 +1,219 @@
-html { 
+html {
   box-sizing: border-box;
 }
 
 body {
-
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
   text-align: center;
   background-image: url("https://preview.pixlr.com/images/800wm/100/1/1001369467.jpg");
-
-
+  font-family: 'Montserrat Alternates', sans-serif, 'Noto Sans TC', sans-serif;
+  display: flex;
+  justify-content: right;
 }
 
-.weather-card{
-    width: 40%;
-    height: 200px;
-    border-radius: 10px;
-    background-color: tomato;
-    margin-bottom: 10%;
+nav {
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  border-radius: 0px 10px 10px 0px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(7, 117, 243, 0.678);
+  transition: 0.5s;
 
-    border:1px solid rgba(0,0,0,0.5);
-    border-radius:10px 10px 2px 2px;
-    -webkit-box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    -moz-box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    background:rgba(240, 240, 240, 0.25);
-
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.weather-cards{
-    width: 100%;
-    height: 100%;
-    
-
-    display: flex;
-    justify-content: space-around;
-    align-content: space-between;
-    flex-flow: wrap;
+nav:hover {
+  width: 150px;
 }
 
-.status, .temp, .time, .city{
+nav:hover > .menu{
+  display: none;
+}
+
+nav:hover button{
+  opacity: 1;
+  transition-delay: 0.3s;
+  transition-duration: 0.5s;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.menu{
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(212, 240, 58, 0.678);
+  position: absolute;
+  top: 46%;
+  border-radius: 10px;
+  border: rgb(241, 243, 130) 1px solid;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.left-side{
+.line{
+  width: 80%;
+  height: 5px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(5, 243, 223, 0.815);
+  border-radius: 2px
+}
+
+.line::before{
+  content: "";
+  width: 80%;
+  height: 5px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(5, 243, 223, 0.815);
+  border-radius: 2px;
+  position: absolute;
+  left: 5px;
+  top: 8px;
+}
+
+.line::after{
+  content: "";
+  width: 80%;
+  height: 5px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(5, 243, 223, 0.815);
+  border-radius: 2px;
+  position: absolute;
+  left: 5px;
+  bottom:8px;
+}
+
+
+
+button{
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: chartreuse 1px solid;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(45, 243, 5, 0.815);
+  border-radius: 2px;
+  opacity: 0;
+  margin-right: 40px;
+}
+
+button:nth-child(3){
+  margin: 200px 0 200px;
+  margin-right: 40px;
+}
+
+.weather-card {
+  width: 40%;
+  height: 200px;
+  background-color: tomato;
+  margin-bottom: 10%;
+  border: 1px solid rgba(255, 253, 128, 0.534);
+  border-radius: 10px 10px 2px 2px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(240, 240, 240, 0.25);
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-cards {
+  width: calc(100% - 100px);
+  height: 100%;
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-flow: wrap;
+}
+
+.status, .temp, .time, .city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
   width: 200px;
   height: 100%;
-
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.status{
+.date {
   width: 100%;
-  height: 70px;
-  /* background-color: turquoise; */
+  height: 50px;
   border-radius: 10px;
   font-size: 20px;
-  align-items: space-around;
-  padding: 10px 0 ; 
-  
+  padding: 20px 0;
 }
-.temp{
+
+.temp {
   width: 100%;
   height: 130px;
-  /* background-color: gold; */
   border-radius: 10px;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: bold;
-
-  
-    border-radius:10px 10px 2px 2px;
-    -webkit-box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    -moz-box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    background:rgba(255, 0, 0, 0.25);
-
-
+  border-radius: 10px 10px 2px 2px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 0, 0, 0.25);
 }
 
-.right-side{
+.right-side {
   width: 200px;
   height: 100%;
-
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-.time{
+.city {
   width: 100%;
-  height: 50px;
-  /* background-color: thistle; */
+  height: 100px;
   margin: 0;
-  border-radius: 10px;
-
-  border-radius:10px 10px 2px 2px;
-    -webkit-box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    -moz-box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    box-shadow:
-      0 2px 6px rgba(0,0,0,0.5),
-      inset 0 1px rgba(255,255,255,0.3),
-      inset 0 10px rgba(255,255,255,0.2),
-      inset 0 10px 20px rgba(255,255,255,0.25),
-      inset 0 -15px 30px rgba(0,0,0,0.3);
-    background:rgba(187, 255, 0, 0.25);
-
+  font-size: 32px;
+  border-radius: 10px 10px 2px 2px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.2), inset 0 10px 20px rgba(255, 255, 255, 0.25), inset 0 -15px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(187, 255, 0, 0.25);
 }
 
-.city{
+.status {
   width: 100%;
-  height: 50px;
-  /* background-color: brown; */
+  height: 50%;
   font-size: 25px;
   border-radius: 10px;
 }
 
-.weather-icon img{
+.weather-icon img {
   width: 150px;
   height: 150px;
-  /* background-color: violet; */
   margin-top: 20%;
+  margin-left: 20px;
   border-radius: 10px;
 }
