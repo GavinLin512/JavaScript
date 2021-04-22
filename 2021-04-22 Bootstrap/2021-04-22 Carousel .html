@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding-bottom: 48px;
+            color: #5a5a5a;
+        }
+
+        h5 {
+            font-size: 2.5rem;
+        }
+
+        .card-body h5{
+            font-size: 2rem;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        .rounded-circle {
+            width: 150px;
+        }
+
+        .card-group {
+            padding-top: 7%;
+        }
+
+        hr {
+            margin: 80px 0;
+        }
+
+        .col-lg-7 h1, .col-lg-7 span, .card-body h5{
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Carousel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://i.ytimg.com/vi/59AMEbkSAp8/maxresdefault.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block text-left">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                        <button type="button" class="btn btn-primary btn-lg">Sign Up Today</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.gamefightclub.com/img/articles/_20200924_EirqfOmWAAEng69.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                        <button type="button" class="btn btn-primary btn-lg">Learn More</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://store-images.s-microsoft.com/image/apps.2258.13810996026151617.f551b122-e365-45bf-a1ec-a7d22ec5980e.058b8b52-97fc-4d3a-b600-af7c74d886c4?mode=scale&q=90&h=720&w=1280&background=%23FFFFFF"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block d-md-block text-right">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-primary btn-lg">Browse Gallery</button>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="container">
+            <div class="card-group d-flex flex-column flex-lg-row">
+                <div class="card border-0 w-100 " style="width: 18rem;">
+                    <img src="https://turnbasedturnip.files.wordpress.com/2018/06/emil-head.jpg"
+                        class="card-img-top rounded-circle m-auto" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Heading</h5>
+                        <p class="card-text">Some representative placeholder content for the three columns of text below
+                            the
+                            carousel. This is the first column.</p>
+                        <a href="#" class="btn btn-secondary">View details</a>
+                    </div>
+                </div>
+                <div class="card ml-lg-5 mr-lg-5 mt-3 mt-lg-0 mb-3 mg-lg-0 border-0 w-100" style="width: 18rem;">
+                    <img src="https://turnbasedturnip.files.wordpress.com/2018/06/emil-head.jpg"
+                        class="card-img-top rounded-circle m-auto" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Heading</h5>
+                        <p class="card-text">Another exciting bit of representative placeholder content. This time,
+                            we've
+                            moved on to the second column.</p>
+                        <a href="#" class="btn btn-secondary">View details</a>
+                    </div>
+                </div>
+                <div class="card border-0 w-100" style="width: 18rem;">
+                    <img src="https://turnbasedturnip.files.wordpress.com/2018/06/emil-head.jpg"
+                        class="card-img-top rounded-circle m-auto" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Heading</h5>
+                        <p class="card-text">And lastly this, the third column of representative placeholder content.
+                        </p>
+                        <a href="#" class="btn btn-secondary">View details</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="w-100">
+            <div class="row d-flex justify-content-lg-between flex-md-nowrap">
+                <div class="col-lg-7 d-flex flex-column justify-content-lg-center ">
+                    <h1 class="pt-md-5">First featurette heading.
+                        <span class="h1 text-muted"> It’ll blow your mind.</span>
+                    </h1>
+                    <p>Some great placeholder content for the first featurette here. Imagine some exciting prose
+                        here.
+                    </p>
+                </div>
+                <div class="col-lg-5 ">
+                    <img src="./img/sample.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <hr class="w-100">
+            <div class="row d-flex flex-md-row-reverse justify-content-between flex-md-nowrap">
+                <div class="col-lg-7 d-flex flex-column justify-content-lg-center ">
+                    <h1 class="pt-md-5">Oh yeah, it’s that good.
+                        <span class="h1 text-muted"> See for yourself.</span>
+                    </h1>
+                    <p>Another featurette? Of course. More placeholder content here to give you an idea of how this
+                        layout would work with some actual real-world content in place.
+                    </p>
+                </div>
+                <div class="col-lg-5 ">
+                    <img src="./img/sample.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <hr class="w-100">
+            <div class="row d-flex justify-content-between flex-md-nowrap">
+                <div class="col-lg-7 d-flex flex-column justify-content-lg-center ">
+                    <h1 class="pt-md-5">And lastly, this one.</h1>
+                    <span class="h1 text-muted"> Checkmate.</span>
+                    <p>And yes, this is the last block of representative placeholder content. Again, not really intended
+                        to be actually read, simply here to give you a better view of what this would look like with
+                        some actual content. Your content.
+                    </p>
+                </div>
+                <div class="col-lg-5 ">
+                    <img src="./img/sample.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <hr class="w-100">
+    </main>
+    <footer class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>© 2017-2021 Company, Inc. ·
+            <a href="#">Privacy</a>· 
+            <a href="#">Terms</a>
+        </p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
