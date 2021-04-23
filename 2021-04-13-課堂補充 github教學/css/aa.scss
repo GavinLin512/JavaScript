@@ -1,0 +1,68 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+
+nav, main, footer{
+    width: 100%;
+    height: 700px;
+    background-color: blue;
+}
+.container{
+    width: 1600px;
+    height: 100%;
+    margin: auto;
+}
+
+main{
+    height: 2000px;
+    background-color: unset;
+    .container{
+        position: relative;
+        .my-page{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+
+            .rock01, .rock02 {
+                width: 500px;
+                height: 200px;
+                background-color: sandybrown;
+                margin: auto;
+                margin-top: 400px;
+            }
+
+            .rock03{
+                @extend .rock01;
+                margin-top: 200px;
+            }
+        }
+
+        .sticky-area{
+            width: 100%;
+            height: 1700px;
+            .sticky{
+                width: 50%;
+                height: 200px;
+                margin: auto;
+                
+                font-size: 36px;
+                color: crimson;
+                background-color: chartreuse;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                position: sticky;
+                top: 0px;
+                z-index: 2;
+                
+            }
+        }
+    }
+
+}

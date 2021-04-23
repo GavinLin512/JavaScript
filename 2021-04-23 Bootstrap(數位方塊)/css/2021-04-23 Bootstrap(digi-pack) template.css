@@ -1,0 +1,92 @@
+nav .navbar-nav .nav-item .btn-secondary {
+  color: #fff;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+nav .navbar-nav .nav-item i,
+nav .navbar-nav .nav-item a {
+  color: #374151;
+}
+
+nav .navbar-nav .nav-item i:first-child {
+  font-size: 25px;
+}
+
+nav .navbar-nav .nav-item i:last-child {
+  font-size: 30px;
+}
+
+nav .navbar-nav .nav-item .btn-secondary:hover {
+  background-color: #a9a9a9;
+}
+
+main .my-container {
+  width: 90%;
+}
+
+main .under-line {
+  position: relative;
+}
+
+main .under-line::after {
+  content: "";
+  width: 80px;
+  height: 5px;
+  background-color: mediumslateblue;
+  position: absolute;
+  left: 46%;
+  bottom: -20px;
+}
+
+main .circle {
+  background-color: mediumpurple;
+  width: 100px;
+  height: 100px;
+}
+
+footer #fat-footer {
+  width: 100%;
+}
+
+footer #fat-footer .fat-f-left svg {
+  width: 40px;
+  height: 40px;
+}
+
+footer .bottom-footer .col-2 svg {
+  width: 20px;
+}
+
+@media (min-width: 576px) {
+  nav .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-inner,
+  .carousel-item img {
+    height: calc(100vh - 70px);
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}
+/*# sourceMappingURL=2021-04-23 Bootstrap(digi-pack) template.css.map */

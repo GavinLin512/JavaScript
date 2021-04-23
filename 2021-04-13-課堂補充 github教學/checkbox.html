@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 20px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu:checked + .hidden{
+            display: flex;
+        }
+        label{
+            color: black;
+            margin: 20px;
+        }
+        input{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <label for="menu">☰</label>
+    <input type="checkbox" name="" id="menu">
+    <div class="hidden">
+        阿我被看到了
+    </div>
+
+</body>
+</html>
