@@ -24,17 +24,19 @@
                 color: #374151;
             }
 
-            i:first-child {
-                font-size: 25px;
+            i {
                 margin-top: 6px;
-            }
-
-            i:last-child {
-                font-size: 30px;
+                font-size: 25px;
             }
 
             .btn-secondary:hover {
                 background-color: #a9a9a9;
+            }
+            .dropdown {
+                .dropdown-menu.show {
+                    min-width: 180px;
+                    left: -150px;
+                }
             }
         }
     }
@@ -283,9 +285,6 @@ main {
             .btn {
                 background-color: #6366f1;
             }
-            .messenger {
-                height: 128px;
-            }
         }
     }
 }
@@ -305,9 +304,14 @@ footer {
         }
     }
     .bottom-footer {
-        .col-2 {
+        background-color: #f3f4f6;
+    }
+    .bg-b-footer {
+        background-color: #f3f4f6;
+        .col-3 {
             svg {
                 width: 20px;
+                color: #6b7280;
             }
         }
     }

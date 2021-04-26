@@ -24,16 +24,16 @@
                 color: #374151;
             }
 
-            i{
-                margin-top: 6px; 
+            i {
+                margin-top: 6px;
                 font-size: 25px;
             }
 
             .btn-secondary:hover {
                 background-color: #a9a9a9;
             }
-            .dropdown{
-                .dropdown-menu.show{
+            .dropdown {
+                .dropdown-menu.show {
                     min-width: 180px;
                     left: -150px;
                 }
@@ -42,9 +42,63 @@
     }
 }
 
-// main {
-    
-// }
+main {
+    background-color: #d1d5db;
+    padding: 50px 0px;
+    .cart-page {
+        max-width: 1024px;
+        height: 873px;
+        background-color: #f3f4f6;
+        border-radius: 10px;
+        padding: 40px;
+
+        .prog-bar {
+            height: 70px;
+        }
+
+        .title-1 {
+            height: 40px;
+        }
+
+        .title-2 {
+            height: 50px;
+        }
+
+        .green-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #ffffff;
+            font-size: 20px;
+            .row {
+                height: unset;
+            }
+        }
+        .green-circle:first-child, .green-circle:nth-child(3) {
+            background-color: #10b981;
+        }
+        .progress {
+            width: 13%;
+            height: 10px;
+            border-radius: 12px;
+            .progress-bar {
+                background-color: #10b981;
+                border-radius: 12px;
+            }
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input{
+            width: 13px;
+            height: 13px;
+        }
+        .click{
+            height: 45px;
+        }
+    }
+}
 
 footer {
     #fat-footer {
@@ -86,6 +140,14 @@ footer {
     .container {
         max-width: 640px;
     }
+
+    main {
+        .cart-page {
+            .progress {
+                width: 20%;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -113,6 +175,13 @@ footer {
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
+    }
+    main {
+        .cart-page {
+            .progress {
+                width: 25%;
+            }
+        }
     }
 }
 

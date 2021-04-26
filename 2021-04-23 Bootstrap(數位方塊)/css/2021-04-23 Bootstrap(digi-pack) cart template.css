@@ -36,6 +36,72 @@
   left: -150px;
 }
 
+main {
+  background-color: #d1d5db;
+  padding: 50px 0px;
+}
+
+main .cart-page {
+  max-width: 1024px;
+  height: 873px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+main .cart-page .prog-bar {
+  height: 70px;
+}
+
+main .cart-page .title-1 {
+  height: 40px;
+}
+
+main .cart-page .title-2 {
+  height: 50px;
+}
+
+main .cart-page .green-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+main .cart-page .green-circle .row {
+  height: unset;
+}
+
+main .cart-page .green-circle:first-child {
+  background-color: #10b981;
+}
+
+main .cart-page .progress {
+  width: 13%;
+  height: 10px;
+  border-radius: 12px;
+}
+
+main .cart-page .progress .progress-bar {
+  background-color: #10b981;
+  border-radius: 12px;
+}
+
+main .cart-page input[type="number"]::-webkit-outer-spin-button,
+main .cart-page input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main .cart-page input {
+  width: 30px;
+  height: 30px;
+}
+
+main .cart-page .click {
+  height: 45px;
+}
+
 footer #fat-footer {
   width: 100%;
 }
@@ -72,6 +138,9 @@ footer .bg-b-footer .col-3 svg {
   .container {
     max-width: 640px;
   }
+  main .cart-page .progress {
+    width: 20%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -100,6 +169,9 @@ footer .bg-b-footer .col-3 svg {
   .container {
     max-width: 960px;
   }
+  main .cart-page .progress {
+    width: 25%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -119,4 +191,4 @@ footer .bg-b-footer .col-3 svg {
     max-width: 1536px;
   }
 }
-/*# sourceMappingURL=2021-04-23 Bootstrap(digi-pack) template.css.map */
+/*# sourceMappingURL=2021-04-23 Bootstrap(digi-pack) cart template.css.map */

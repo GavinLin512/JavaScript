@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/2021-04-23 Bootstrap(digi-pack) template.css">
+    <link rel="stylesheet" href="./css/2021-04-23 Bootstrap(digi-pack) cart-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
@@ -49,22 +49,145 @@
                             <i class="fas fa-shopping-cart mr-2"></i>
                         </a>
                         <div class="dropdown">
-                             <a class="nav-link d-flex " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user-circle"></i>
-                        </a>
+                            <a class="nav-link d-flex " href="#" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-user-circle"></i>
+                            </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item login" href="#">Login</a>
+                                <a class="dropdown-item login" href="#">Login</a>
                             </div>
-                          </div>
-                       
+                        </div>
+
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <main>
-        
+        <div class="container my-container">
+            <div class="row mx-auto cart-page no-gutters">
+                <div class="col-12 title-1 mb-4">
+                    <h2>購物車</h2>
+                </div>
+                <div class="col-12 px-3 prog-bar">
+                    <div class="col-12 d-flex justify-content-around align-items-center px-3">
+                        <div
+                            class="green-circle rounded-circle text-light d-flex align-items-center justify-content-center">
+                            1</div>
+                        <div class="progress mx-1">
+                            <div class="progress-bar" role="progressbar" style="width: 33.33%" aria-valuenow="33.33%"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div
+                            class="green-circle rounded-circle text-dark d-flex align-items-center justify-content-center">
+                            2</div>
+                        <div class="progress mx-1">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <div
+                            class="green-circle rounded-circle text-dark d-flex align-items-center justify-content-center">
+                            3</div>
+                        <div class="progress mx-1">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <div
+                            class="green-circle rounded-circle text-dark d-flex align-items-center justify-content-center">
+                            4</div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between mr-5 px-2">
+                        <p><small>確認購物車</small></p>
+                        <p><small class="mr-2">付款與運送方式</small></p>
+                        <p><small class="mr-4">填寫資料</small></p>
+                        <p><small class="mr-1">完成訂購</small></p>
+                    </div>
+                </div>
+                <hr class="my-3 w-100">
+                <div class="col-12 title-2 mb-2 mt-3">
+                    <h3>訂單明細</h3>
+                </div>
+                <div class="col-12 product d-flex no-gutters ">
+                    <div class="col-8 d-flex align-items-center">
+                        <div class="col-2">
+                            <img src="https://i.imgur.com/EEguU02.jpg" alt="">
+                        </div>
+                        <div class="col-9 ml-4">
+                            <h5>Chicken momo</h5>
+                            <p class="mb-0"><small class="text-muted">#41551</small></p>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center ">
+                        <small>-</small>
+                        <input type="number" placeholder="1" class="text-center mx-1">
+                        <small>+</small>
+                        <small class="ml-2">$10.50</small>
+                    </div>
+                </div>
+                <hr class="my-3 w-100">
+                <div class="col-12 product d-flex no-gutters ">
+                    <div class="col-8 d-flex align-items-center">
+                        <div class="col-2">
+                            <img src="https://i.imgur.com/Uv2Yqzo.jpg" alt="">
+                        </div>
+                        <div class="col-9 ml-4">
+                            <h5>Spicy Mexican potatoes</h5>
+                            <p class="mb-0"><small class="text-muted">#66999</small></p>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center ">
+                        <small>-</small>
+                        <input type="number" placeholder="1" class="text-center mx-1">
+                        <small>+</small>
+                        <small class="ml-2">$10.50</small>
+                    </div>
+                </div>
+                <hr class="my-3 w-100">
+                <div class="col-12 product d-flex no-gutters ">
+                    <div class="col-8 d-flex align-items-center">
+                        <div class="col-2">
+                            <img src="https://i.imgur.com/xbTAITF.jpg" alt="">
+                        </div>
+                        <div class="col-9 ml-4">
+                            <h5>Breakfast</h5>
+                            <p class="mb-0"><small class="text-muted">#86577</small></p>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center ">
+                        <small>-</small>
+                        <input type="number" placeholder="1" class="text-center mx-1">
+                        <small>+</small>
+                        <small class="ml-2">$10.50</small>
+                    </div>
+                </div>
+                <hr class="my-3 w-100">
+                <div class="col-12 d-flex justify-content-end no-gutters">
+                    <div class="col-4">
+                        <div class="row w-100 d-flex justify-content-between">
+                            <p><small class="text-muted ">數量:</small></p>3
+                        </div>
+                        <div class="row w-100 d-flex justify-content-between">
+                            <p><small class="text-muted ">小計:</small></p>$24.90
+                        </div>
+                        <div class="row w-100 d-flex justify-content-between">
+                            <p><small class="text-muted ">運費:</small></p>$24.90
+                        </div>
+                        <div class="row w-100 d-flex justify-content-between">
+                            <p><small class="text-muted ">總計:</small></p>$24.90
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-3 w-100">
+                <div class="col-12 d-flex justify-content-between click">
+                    <p class="mb-0 d-flex align-items-center"><i class="fa fa-arrow-left text-sm pr-2"></i>返回購物</p>
+                    <a class="btn btn-primary btn-lg px-5" href="./2021-04-23 Bootstrap(數位方塊) cart-2.html" role="button">下一步</a>
+                </div>
+            </div>
+        </div>
+
     </main>
+
     <footer class="mt-5">
         <div class="container">
             <div class="row d-flex justify-content-between  no-gutters mb-5 " id="fat-footer">
@@ -145,11 +268,13 @@
         </div>
         <div class="row w-100 bg-b-footer m-0">
             <div class="container">
-                <div class="row bottom-footer d-flex flex-column align-content-center flex-md-row  justify-content-md-between">
+                <div
+                    class="row bottom-footer d-flex flex-column align-content-center flex-md-row  justify-content-md-between">
                     <div class="col-sm-6">
                         <p class="my-2 text-center text-md-left ">© 2020 Tailblocks — @knyttneve</p>
                     </div>
-                    <div class="col-3 col-sm-2 d-flex justify-content-center justify-content-md-end mb-2 mb-md-0 mx-auto mx-md-0">
+                    <div
+                        class="col-3 col-sm-2 d-flex justify-content-center justify-content-md-end mb-2 mb-md-0 mx-auto mx-md-0">
                         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="w-5 h-5 mr-1 mr-md-2" viewBox="0 0 24 24">
                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
