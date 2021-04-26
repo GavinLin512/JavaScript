@@ -43,7 +43,6 @@ main {
 
 main .cart-page {
   max-width: 1024px;
-  height: 873px;
   background-color: #f3f4f6;
   border-radius: 10px;
   padding: 40px;
@@ -83,7 +82,7 @@ main .cart-page .progress {
 }
 
 main .cart-page .progress .progress-bar {
-  background-color: #10b981;
+  background-color: #6ee7b7;
   border-radius: 12px;
 }
 
@@ -96,10 +95,6 @@ main .cart-page input[type="number"]::-webkit-inner-spin-button {
 main .cart-page input {
   width: 30px;
   height: 30px;
-}
-
-main .cart-page .click {
-  height: 45px;
 }
 
 footer #fat-footer {

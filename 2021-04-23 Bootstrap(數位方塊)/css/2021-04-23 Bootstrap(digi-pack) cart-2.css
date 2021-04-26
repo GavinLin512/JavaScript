@@ -43,7 +43,6 @@ main {
 
 main .cart-page {
   max-width: 1024px;
-  height: 873px;
   background-color: #f3f4f6;
   border-radius: 10px;
   padding: 40px;
@@ -83,7 +82,7 @@ main .cart-page .progress {
 }
 
 main .cart-page .progress .progress-bar {
-  background-color: #10b981;
+  background-color: #6ee7b7;
   border-radius: 12px;
 }
 
@@ -98,8 +97,9 @@ main .cart-page input {
   height: 13px;
 }
 
-main .cart-page .click {
-  height: 45px;
+main .cart-page h3 {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 footer #fat-footer {

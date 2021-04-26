@@ -71,7 +71,7 @@ main .cart-page .green-circle .row {
   height: unset;
 }
 
-main .cart-page .green-circle:first-child, main .cart-page .green-circle:nth-child(3), main .cart-page .green-circle:nth-child(5) {
+main .cart-page .green-circle:first-child {
   background-color: #10b981;
 }
 
@@ -86,6 +86,16 @@ main .cart-page .progress .progress-bar {
   border-radius: 12px;
 }
 
+main .cart-page .product {
+  height: 80px;
+}
+
+main .cart-page .product img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
 main .cart-page input[type="number"]::-webkit-outer-spin-button,
 main .cart-page input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -93,28 +103,8 @@ main .cart-page input[type="number"]::-webkit-inner-spin-button {
 }
 
 main .cart-page input {
-  margin-bottom: 20px;
+  width: 30px;
   height: 30px;
-  background-color: #f3f4f6;
-  border-color: #e4e7eb;
-  border-radius: 5px;
-  border-style: solid;
-}
-
-main .cart-page input::-webkit-input-placeholder {
-  color: #a0a8b3;
-}
-
-main .cart-page input:-ms-input-placeholder {
-  color: #a0a8b3;
-}
-
-main .cart-page input::-ms-input-placeholder {
-  color: #a0a8b3;
-}
-
-main .cart-page input::placeholder {
-  color: #a0a8b3;
 }
 
 main .cart-page h3 {
@@ -122,8 +112,8 @@ main .cart-page h3 {
   font-weight: 400;
 }
 
-main .cart-page label {
-  font-size: 20px;
+main .cart-page .email {
+  margin-right: 40px;
 }
 
 footer #fat-footer {
@@ -215,4 +205,4 @@ footer .bg-b-footer .col-3 svg {
     max-width: 1536px;
   }
 }
-/*# sourceMappingURL=2021-04-23 Bootstrap(digi-pack) cart-3.css.map */
+/*# sourceMappingURL=2021-04-23 Bootstrap(digi-pack) cart-4.css.map */

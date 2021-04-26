@@ -72,7 +72,7 @@ main {
                 height: unset;
             }
         }
-        .green-circle:first-child, .green-circle:nth-child(3) {
+        .green-circle:first-child {
             background-color: #10b981;
         }
         .progress {
@@ -84,19 +84,34 @@ main {
                 border-radius: 12px;
             }
         }
+
+        .product {
+            height: 80px;
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
         input{
-            width: 13px;
-            height: 13px;
+            width: 30px;
+            height: 30px;
         }
+
         h3{
             font-size: 24px;
             font-weight: 400;
         }
+        .email{
+            margin-right: 40px;
+        }
+
     }
 }
 

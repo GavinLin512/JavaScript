@@ -47,7 +47,6 @@ main {
     padding: 50px 0px;
     .cart-page {
         max-width: 1024px;
-        height: 873px;
         background-color: #f3f4f6;
         border-radius: 10px;
         padding: 40px;
@@ -81,7 +80,7 @@ main {
             height: 10px;
             border-radius: 12px;
             .progress-bar {
-                background-color: #10b981;
+                background-color: #6ee7b7;
                 border-radius: 12px;
             }
         }
@@ -91,11 +90,25 @@ main {
             margin: 0;
         }
         input{
-            width: 30px;
+            margin-bottom: 20px;
             height: 30px;
+            background-color: #f3f4f6;
+            border-color: #e4e7eb;
+            border-radius: 5px;
+            border-style: solid;
         }
-        .click{
-            height: 45px;
+
+        input::placeholder{
+            color: #a0a8b3;
+        }
+
+        h3{
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        label{
+            font-size: 20px;
         }
     }
 }
