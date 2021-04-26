@@ -1,21 +1,38 @@
-nav {
+.navbar-light {
+    .navbar-brand {
+        max-width: 200px;
+        min-width: 150px;
+    }
+
     .navbar-nav {
         .nav-item {
-            .btn-secondary {
+            .btn {
+                width: 100%;
                 color: #fff;
                 background-color: #f8f9fa;
                 border-color: #f8f9fa;
+                border-radius: 10px;
             }
+            .btn:hover {
+                background-color: #e4e7eb;
+            }
+
             i,
             a {
+                font-size: 14px;
+                font-weight: 600;
                 color: #374151;
             }
+
             i:first-child {
                 font-size: 25px;
+                margin-top: 6px;
             }
+
             i:last-child {
                 font-size: 30px;
             }
+
             .btn-secondary:hover {
                 background-color: #a9a9a9;
             }
@@ -23,31 +40,9 @@ nav {
     }
 }
 
-main {
-    .my-container {
-        width: 90%;
-    }
-
-    .under-line {
-        position: relative;
-    }
-
-    .under-line::after {
-        content: "";
-        width: 80px;
-        height: 5px;
-        background-color: mediumslateblue;
-
-        position: absolute;
-        left: 46%;
-        bottom: -20px;
-    }
-    .circle {
-        background-color: mediumpurple;
-        width: 100px;
-        height: 100px;
-    }
-}
+// main {
+    
+// }
 
 footer {
     #fat-footer {
@@ -58,6 +53,9 @@ footer {
                 width: 40px;
                 height: 40px;
             }
+        }
+        .fat-f-text {
+            width: 250px;
         }
     }
     .bottom-footer {
@@ -77,29 +75,54 @@ footer {
     }
 }
 
-@media (min-width: 768px) {
-    .carousel-inner,
-    .carousel-item img {
-        height: calc(100vh - 70px);
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
     }
 }
 
 @media (min-width: 768px) {
-    .navbar-expand-lg .navbar-collapse {
-        // display: -ms-flexbox!important;
-        display: flex !important;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    }
-    .navbar-nav {
-        flex-direction: row;
-    }
-    .navbar-expand-lg .navbar-toggler {
-        display: none;
+    .container {
+        max-width: 768px;
+
+        .navbar-expand-lg {
+            .navbar-collapse {
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -ms-flex-preferred-size: auto;
+                flex-basis: auto;
+
+                .navbar-nav {
+                    flex-direction: row;
+                }
+            }
+
+            .navbar-toggler {
+                display: none;
+            }
+        }
     }
 }
-// @media (min-width: 1200px) {
-//     .container {
-//         max-width: 1280px;
-//     }
-// }
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
