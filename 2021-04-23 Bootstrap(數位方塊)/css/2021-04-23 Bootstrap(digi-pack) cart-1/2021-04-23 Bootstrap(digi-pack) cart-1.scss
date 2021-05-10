@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    transition: .3s;
+}
 .navbar-light {
     .navbar-brand {
         max-width: 200px;
@@ -106,6 +110,10 @@ main {
             font-size: 24px;
             font-weight: 400;
         }
+    }
+    .btn-sm:focus{
+        outline: none;
+        box-shadow: none;
     }
 }
 

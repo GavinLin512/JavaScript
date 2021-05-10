@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .navbar-light .navbar-brand {
   max-width: 200px;
   min-width: 150px;

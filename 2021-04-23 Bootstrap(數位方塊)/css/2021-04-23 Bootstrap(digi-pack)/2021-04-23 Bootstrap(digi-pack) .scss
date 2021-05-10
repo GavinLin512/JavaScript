@@ -187,11 +187,11 @@ main {
     }
     .section-7 {
         .container {
-            .col-lg-5 {
-                img {
-                    height: 256px;
-                }
-
+            .col-lg-5:first-child{
+                height: 256px; 
+                overflow: hidden;
+            }
+            .col-lg-5{
                 .star {
                     width: 80px;
                     color: #6366f1;
@@ -254,7 +254,7 @@ main {
                     }
                 }
             }
-
+            
             .sm-hr {
                 margin: 10px 0 25px;
                 border-color: #e4e7eb;
@@ -268,6 +268,7 @@ main {
                 .card {
                     img {
                         height: 192px;
+                        display: flex;
                     }
                 }
             }
@@ -415,10 +416,11 @@ footer {
         }
         .section-7 {
             .container {
-                .col-lg-5 {
-                    img {
+                .col-lg-5:first-child {
                         height: 100%;
-                    }
+                        img{
+                            position: static;
+                        }
                 }
             }
         }

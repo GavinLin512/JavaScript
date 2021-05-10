@@ -163,8 +163,9 @@ main .section-6 .container .card-group + .row .btn-primary {
   border-color: transparent;
 }
 
-main .section-7 .container .col-lg-5 img {
+main .section-7 .container .col-lg-5:first-child {
   height: 256px;
+  overflow: hidden;
 }
 
 main .section-7 .container .col-lg-5 .star {
@@ -241,6 +242,9 @@ main .section-7 .container .sm-hr {
 
 main .section-8 .container .row .card img {
   height: 192px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .section-9 {
@@ -358,8 +362,11 @@ footer .bg-b-footer .col-3 svg {
     left: 13px;
     top: 40px;
   }
-  main .section-7 .container .col-lg-5 img {
+  main .section-7 .container .col-lg-5:first-child {
     height: 100%;
+  }
+  main .section-7 .container .col-lg-5:first-child img {
+    position: static;
   }
   main .section-8 .container .row .card img {
     height: unset;
