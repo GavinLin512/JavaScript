@@ -120,9 +120,9 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center ">
                         <button type="button" class="btn btn-sm minus">-</button>
-                        <input type="number" id="count" value="0" class="text-center mx-1" readonly>
+                        <input type="number" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" id="count" value="0" class="text-center mx-1">
                         <button type="button" class="btn btn-sm plus">+</button>
-                        <small class="ml-2 price">10.50</small>
+                        <small data-price="30.50" class="ml-2 price">$30.50</small>
                     </div>
                 </div>
                 <hr class="my-3 w-100">
@@ -138,9 +138,9 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center ">
                         <button type="button" class="btn btn-sm minus">-</button>
-                        <input type="number" id="count" value="0" class="text-center mx-1" readonly>
+                        <input type="number" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" id="count" value="0" class="text-center mx-1">
                         <button type="button" class="btn btn-sm plus">+</button>
-                        <small class="ml-2 price">10.50</small>
+                        <small data-price="20.50" class="ml-2 price">$20.50</small>
                     </div>
                 </div>
                 <hr class="my-3 w-100">
@@ -156,9 +156,9 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end align-items-center ">
                         <button type="button" class="btn btn-sm minus">-</button>
-                        <input type="number" id="count" value="0" class="text-center mx-1" readonly>
+                        <input type="number" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" id="count" value="0" class="text-center mx-1">
                         <button type="button" class="btn btn-sm plus">+</button>
-                        <small class="ml-2 price">10.50</small>
+                        <small data-price="40.50" class="ml-2 price">$40.50</small>
                     </div>
                 </div>
                 <hr class="my-3 w-100">
@@ -166,19 +166,19 @@
                     <div class="col-4">
                         <div class="row w-100 d-flex justify-content-between">
                             <p><small class="text-muted ">數量:</small></p>
-                            <span class="amount">0</span>
+                            <span data-defalt="0" class="amount">0</span>
                         </div>
                         <div class="row w-100 d-flex justify-content-between">
                             <p><small class="text-muted ">小計:</small></p>
-                            <span class="subtotal">0</span>
+                            <span data-defalt="0" class="subtotal">$0</span>
                         </div>
                         <div class="row w-100 d-flex justify-content-between">
                             <p><small class="text-muted ">運費:</small></p>
-                            <span class="shipping">20</span>
+                            <span data-defalt="0" class="shipping">$0</span>
                         </div>
                         <div class="row w-100 d-flex justify-content-between">
                             <p><small class="text-muted ">總計:</small></p>
-                            <span class="totalcost">0</span>
+                            <span data-defalt="0" class="totalcost">$0</span>
                         </div>
                     </div>
                 </div>
