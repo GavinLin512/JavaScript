@@ -7,28 +7,45 @@ var amount = document.querySelector('.amount')
 var subTotal = document.querySelector('.subtotal')
 var shipping = document.querySelector('.shipping')
 var totalCost = document.querySelector('.totalcost')
-// console.log(count.length);
+var priceArr = document.querySelectorAll('.price')
+// console.log(priceArr);
 for (let index = 0; index < count.length; index++) {
 
-    var countValue = count[index].value
-
+    var price = priceArr[index].innerHTML
+    var priceNumber = parseFloat(price).toFixed(2)
+    // console.log(amount.innerHTML);
     plus[index].onclick = function () {
-        countValue++
-        console.log(count[index].value)
+        parseInt(count[index].value++)
+        amount.innerHTML++
 
-        // amount.innerHTML = '$' + 
+        priceCount = priceNumber * amount.innerHTML
+        subTotal.innerHTML = '$' + priceCount.toFixed(2)
+        var totalCostNumber = parseFloat(parseFloat(shipping.innerHTML) + parseFloat(priceCount.toFixed(2))).toFixed(2)
+        totalCost.innerHTML = '$' + totalCostNumber
+        
+        console.log(typeof parseFloat(priceCount.toFixed(2)))
     }
 
-    minus[index].onclick = function(){
-        countValue--
-        if (countValue <= 0) {
-            countValue = 0
+
+    minus[index].onclick = function () {
+
+        if (count[index].value != 0) {
+            parseInt(count[index].value--)
+            amount.innerHTML--
+
+            var priceCount = priceNumber * amount.innerHTML
+            subTotal.innerHTML = '$' + priceCount.toFixed(2)
+            var totalCostNumber = parseFloat(parseFloat(shipping.innerHTML) + parseFloat(priceCount.toFixed(2))).toFixed(2)
+            totalCost.innerHTML = '$' + totalCostNumber
         }
 
+
     }
 
-}
 
+
+}
+// console.log(amount.innerHTML);
 
 
 
