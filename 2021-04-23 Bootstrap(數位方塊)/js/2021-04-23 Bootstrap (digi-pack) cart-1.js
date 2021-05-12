@@ -16,7 +16,7 @@ var priceCountArr1 = [];
 var priceCountArr2 = [];
 
 var priceCountAll = [priceCountArr0,priceCountArr1,priceCountArr2]
-console.log(priceCountAll);
+// console.log(priceCountAll);
 
 
 
@@ -42,12 +42,13 @@ for (let index = 0; index < count.length; index++) {
 
         for (let j = 0; j < priceCountAll.length; j++) {
             priceCountAll[j].push(priceNumberArr[j] * parseInt(count[j].value))
+            // console.log(priceCountAll[j]);
             
         }
 
-        priceCountArr0.push(priceNumberArr[0] * parseInt(count[0].value))
-        priceCountArr1.push(priceNumberArr[1] * parseInt(count[1].value))
-        priceCountArr2.push(priceNumberArr[2] * parseInt(count[2].value))
+        // priceCountArr0.push(priceNumberArr[0] * parseInt(count[0].value))
+        // priceCountArr1.push(priceNumberArr[1] * parseInt(count[1].value))
+        // priceCountArr2.push(priceNumberArr[2] * parseInt(count[2].value))
 
         var priceCount0 = priceCountArr0.pop()
         var priceCount1 = priceCountArr1.pop()
@@ -82,9 +83,14 @@ for (let index = 0; index < count.length; index++) {
             amount.innerHTML--
 
             // 小計價格
-            priceCountArr0.push(priceNumberArr[0] * parseInt(count[0].value))
-            priceCountArr1.push(priceNumberArr[1] * parseInt(count[1].value))
-            priceCountArr2.push(priceNumberArr[2] * parseInt(count[2].value))
+            for (let j = 0; j < priceCountAll.length; j++) {
+                priceCountAll[j].push(priceNumberArr[j] * parseInt(count[j].value))
+                // console.log(priceCountAll[j]);
+                
+            }
+            // priceCountArr0.push(priceNumberArr[0] * parseInt(count[0].value))
+            // priceCountArr1.push(priceNumberArr[1] * parseInt(count[1].value))
+            // priceCountArr2.push(priceNumberArr[2] * parseInt(count[2].value))
 
             var priceCount0 = priceCountArr0.pop()
             var priceCount1 = priceCountArr1.pop()
