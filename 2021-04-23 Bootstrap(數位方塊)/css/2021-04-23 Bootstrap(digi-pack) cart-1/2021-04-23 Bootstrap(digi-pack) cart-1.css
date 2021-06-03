@@ -103,6 +103,10 @@ main .cart-page .product img {
   border-radius: 50%;
 }
 
+main .cart-page .product .price {
+  width: 50px;
+}
+
 main .cart-page input[type="number"]::-webkit-outer-spin-button,
 main .cart-page input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;

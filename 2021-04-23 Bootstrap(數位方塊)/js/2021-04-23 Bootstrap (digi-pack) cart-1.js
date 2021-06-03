@@ -15,20 +15,19 @@ var priceCountArr0 = [];
 var priceCountArr1 = [];
 var priceCountArr2 = [];
 
-var priceCountAll = [priceCountArr0,priceCountArr1,priceCountArr2]
-// console.log(priceCountAll);
+var priceCountAll = [priceCountArr0, priceCountArr1, priceCountArr2]
+
 
 
 
 // for迴圈，對應不同的商品
 for (let index = 0; index < count.length; index++) {
-    // console.log(priceArr[index].dataset.price);
+    
 
     // 取得price的data
     priceNumberArr.push(parseFloat(priceArr[index].dataset.price))
     // var priceNumber = parseFloat(price).toFixed(2)
-    // console.log(amount.innerHTML);
-    // console.log(priceNumberArr[index]);
+    
 
 
     // 數量增加
@@ -42,10 +41,7 @@ for (let index = 0; index < count.length; index++) {
 
         for (let j = 0; j < priceCountAll.length; j++) {
             priceCountAll[j].push(priceNumberArr[j] * parseInt(count[j].value))
-            // console.log(priceCountAll[j]);
-            
         }
-
         // priceCountArr0.push(priceNumberArr[0] * parseInt(count[0].value))
         // priceCountArr1.push(priceNumberArr[1] * parseInt(count[1].value))
         // priceCountArr2.push(priceNumberArr[2] * parseInt(count[2].value))
@@ -66,12 +62,13 @@ for (let index = 0; index < count.length; index++) {
         var totalCostNumber = parseFloat(parseFloat(subTotalNumber) + shippingPrice).toFixed(2)
         totalCost.innerHTML = '$' + totalCostNumber
 
-
-
-
+        // 價格onchange
+        priceArr[0].innerHTML = '$' + priceCount0.toFixed(2)
+        priceArr[1].innerHTML = '$' + priceCount1.toFixed(2)
+        priceArr[2].innerHTML = '$' + priceCount2.toFixed(2)
         // console.log(typeof parseFloat(priceCount.toFixed(2)))
     }
-
+    
     // 數量減少
     minus[index].onclick = function () {
 
@@ -86,7 +83,6 @@ for (let index = 0; index < count.length; index++) {
             for (let j = 0; j < priceCountAll.length; j++) {
                 priceCountAll[j].push(priceNumberArr[j] * parseInt(count[j].value))
                 // console.log(priceCountAll[j]);
-                
             }
             // priceCountArr0.push(priceNumberArr[0] * parseInt(count[0].value))
             // priceCountArr1.push(priceNumberArr[1] * parseInt(count[1].value))
@@ -95,7 +91,7 @@ for (let index = 0; index < count.length; index++) {
             var priceCount0 = priceCountArr0.pop()
             var priceCount1 = priceCountArr1.pop()
             var priceCount2 = priceCountArr2.pop()
-            
+
             var subTotalNumber = priceCount0 + priceCount1 + priceCount2
 
             subTotal.innerHTML = '$' + subTotalNumber.toFixed(2)
@@ -108,7 +104,13 @@ for (let index = 0; index < count.length; index++) {
             var totalCostNumber = parseFloat(parseFloat(subTotalNumber.toFixed(2)) + shippingPrice).toFixed(2)
             totalCost.innerHTML = '$' + totalCostNumber
 
+            // 價格onchange
+            priceArr[0].innerHTML = '$' + priceCount0.toFixed(2)
+            priceArr[1].innerHTML = '$' + priceCount1.toFixed(2)
+            priceArr[2].innerHTML = '$' + priceCount2.toFixed(2)
+
         }
+        
 
         // 當數量等於0，或初始狀態
         if (amount.innerHTML == 0) {
@@ -124,7 +126,12 @@ for (let index = 0; index < count.length; index++) {
 
 }
 
-// console.log(amount.innerHTML);
+
+function priceOnchange() {
+    priceArr.innerHTML = priceCountArr
+}
+
+
 
 
 

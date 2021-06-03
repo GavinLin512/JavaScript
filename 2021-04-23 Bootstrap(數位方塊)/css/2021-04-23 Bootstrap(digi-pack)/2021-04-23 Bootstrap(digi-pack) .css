@@ -5,9 +5,20 @@
   transition: .3s;
 }
 
+.navbar-light {
+  height: 92px;
+}
+
 .navbar-light .navbar-brand {
   max-width: 200px;
   min-width: 150px;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.navbar-light .navbar-brand img {
+  margin-left: 13px;
+  height: 92px;
 }
 
 .navbar-light .navbar-nav .nav-item .btn {
